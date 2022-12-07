@@ -1,6 +1,5 @@
 <?php 
 class RegisterUser{
-	// Class properties
 	private $username;
 	private $raw_password;
 	private $encrypted_password;
@@ -8,7 +7,7 @@ class RegisterUser{
 	public $success;
 	private $storage = "data.json";
 	private $stored_users;
-	private $new_user; // array 
+	private $new_user;
 
 
 	public function __construct($username, $password){
@@ -34,7 +33,7 @@ class RegisterUser{
 
 	private function checkFieldValues(){
 		if(empty($this->username) || empty($this->raw_password)){
-			$this->error = "Both fields are required.";
+			$this->error = "Pola są wymagane.";
 			return false;
 		}else{
 			return true;
@@ -45,7 +44,7 @@ class RegisterUser{
 	private function usernameExists(){
 		foreach($this->stored_users as $user){
 			if($this->username == $user['username']){
-				$this->error = "Username already taken, please choose a different one.";
+				$this->error = "Nazwa zajęta";
 				return true;
 			}
 		}
@@ -57,13 +56,13 @@ class RegisterUser{
 		if($this->usernameExists() == FALSE){
 			array_push($this->stored_users, $this->new_user);
 			if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
-				return $this->success = "Your registration was successful";
+				return $this->success = "Zarejestrowano poprawnie";
 			}else{
-				return $this->error = "Something went wrong, please try again";
+				return $this->error = "Coś poszło nie tak";
 			}
 		}
 	}
 
 
 
-} // end of class
+}

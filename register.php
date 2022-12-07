@@ -11,21 +11,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link rel="stylesheet" href="styles.css">
-	<title>Register form</title>
+	<title>Rejestracja</title>
 </head>
 <body>
 
 	<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-		<h2>Register form</h2>
-		<h4>Both fields are <span>required</span></h4>
+		<h2>Formularz rejestracyjny</h2>
+		<h4>Wszystkie pola są <span>wymagane</span></h4>
 
-		<label>Username</label>
+		<label>Nazwa użytkownika</label>
 		<input type="text" name="username">
 
-		<label>Password</label>
+		<label>Hasło</label>
 		<input type="text" name="password">
 
-		<button type="submit" name="submit">Register</button>
+		<button type="submit" name="submit">Wyślij</button>
 
 		<p class="error"><?php echo @$user->error ?></p>
 		<p class="success"><?php echo @$user->success ?></p>

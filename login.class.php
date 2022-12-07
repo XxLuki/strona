@@ -1,6 +1,5 @@
 <?php 
 class LoginUser{
-	// class properties
 	private $username;
 	private $password;
 	public $error;
@@ -8,7 +7,6 @@ class LoginUser{
 	private $storage = "data.json";
 	private $stored_users;
 
-	// class methods
 	public function __construct($username, $password){
 		$this->username = $username;
 		$this->password = $password;
@@ -27,7 +25,7 @@ class LoginUser{
 				}
 			}
 		}
-		return $this->error = "Wrong username or password";
+		return $this->error = "Złe hasło lub login";
 	}
 
 }
