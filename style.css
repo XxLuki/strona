@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(24, 24, 24);
+    height: 100vh;
+}
+
+.pytanie,
+.odpowiedz,
+.przyciski,
+.ustawienia,
+.navbar,
+.row {
+    background-color: rgb(64, 64, 64);
+    color: #fff;
+}
+
+.pytanie,
+.navbar-brand,
+.nav-link {
+    color: white;
+}
+
+.bi {
+    color: white;
+}
+
+.row {
+    margin-left: -12px;
+}
+
+.przycisk,
+.progress {
+    padding: 0px;
+}
+
+.pytanie {
+    padding-top: 0.5rem;
+}
+
+.przycisk_tak:hover {
+    background-color: greenyellow;
+}
+
+.przycisk_nie:hover {
+    background-color: red;
+}
+.text-center{
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 993px) {
+    .text-center{
+        font-size: 1.3rem;
+    }
+    .container-lg{
+        border-radius: 0;
+      }
+}
